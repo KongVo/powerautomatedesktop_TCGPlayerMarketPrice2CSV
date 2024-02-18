@@ -1,10 +1,74 @@
-Display.InputDialog Title: $'''TCG Player URL Input''' Message: $'''Enter TCG Player URL''' DefaultValue: $'''https://www.tcgplayer.com/search/pokemon/sv-paldean-fates?view=grid&productLineName=pokemon&setName=sv-paldean-fates&ProductTypeName=Cards&page=1''' InputType: Display.InputType.SingleLine IsTopMost: False UserInput=> UserInput ButtonPressed=> ButtonPressed
+DISABLE Display.InputDialog Title: $'''TCG Player URL Input''' Message: $'''Enter TCG Player URL''' DefaultValue: $'''https://www.tcgplayer.com/search/pokemon/sv-paldean-fates?view=grid&productLineName=pokemon&setName=sv-paldean-fates&ProductTypeName=Cards&page=1''' InputType: Display.InputType.SingleLine IsTopMost: False UserInput=> UserInput ButtonPressed=> ButtonPressed
+Display.SelectFromListDialog.SelectFromList Title: $'''Get TCG Player Market Price''' Message: $'''Choose Pokemon Set''' List: $'''SWSH01: Sword & Shield Base Set
+SWSH02: Rebel Clash
+SWSH03: Darkness Ablaze
+SWSH04: Vivid Voltage
+SWSH05: Battle Styles
+SWSH06: Chilling Reign
+SWSH07: Evolving Skies
+SWSH08: Fusion Strike
+SWSH09: Brilliant Stars
+SWSH10: Astral Radiance
+SWSH11: Lost Origin
+SWSH12: Silver Tempest
+Crown Zenith
+SV01: Scarlet & Violet Base Set
+SV02: Paldea Evolved
+SV03: Obsidian Flames
+SV04: Paradox Rift
+SV: Scarlet & Violet 151
+SV: Paldean Fates''' IsTopMost: True AllowEmpty: False SelectedItem=> SelectedItem SelectedIndex=> SelectedIndex ButtonPressed=> ButtonPressed3
+SWITCH SelectedItem
+    CASE = $'''SWSH01: Sword & Shield Base Set'''
+        SET UserInput TO $'''https://www.tcgplayer.com/search/pokemon/swsh01-sword-and-shield-base-set?view=grid&productLineName=pokemon&ProductTypeName=Cards&page=1&setName=swsh01-sword-and-shield-base-set'''
+    CASE = $'''SWSH02: Rebel Clash'''
+        SET UserInput TO $'''https://www.tcgplayer.com/search/pokemon/swsh02-rebel-clash?view=grid&productLineName=pokemon&ProductTypeName=Cards&page=1&setName=swsh02-rebel-clash
+'''
+    CASE = $'''SWSH03: Darkness Ablaze'''
+        SET UserInput TO $'''https://www.tcgplayer.com/search/pokemon/swsh03-darkness-ablaze?view=grid&productLineName=pokemon&ProductTypeName=Cards&page=1&setName=swsh03-darkness-ablaze'''
+    CASE = $'''SWSH04: Vivid Voltage'''
+        SET UserInput TO $'''https://www.tcgplayer.com/search/pokemon/swsh04-vivid-voltage?view=grid&productLineName=pokemon&ProductTypeName=Cards&page=1&setName=swsh04-vivid-voltage'''
+    CASE = $'''SWSH05: Battle Styles'''
+        SET UserInput TO $'''https://www.tcgplayer.com/search/pokemon/swsh05-battle-styles?view=grid&productLineName=pokemon&ProductTypeName=Cards&page=1&setName=swsh05-battle-styles'''
+    CASE = $'''SWSH06: Chilling Reign'''
+        SET UserInput TO $'''https://www.tcgplayer.com/search/pokemon/swsh06-chilling-reign?view=grid&productLineName=pokemon&ProductTypeName=Cards&page=1&setName=swsh06-chilling-reign'''
+    CASE = $'''SWSH07: Evolving Skies'''
+        SET UserInput TO $'''https://www.tcgplayer.com/search/pokemon/swsh07-evolving-skies?view=grid&productLineName=pokemon&ProductTypeName=Cards&page=1&setName=swsh07-evolving-skies'''
+    CASE = $'''SWSH08: Fusion Strike'''
+        SET UserInput TO $'''https://www.tcgplayer.com/search/pokemon/swsh08-fusion-strike?view=grid&productLineName=pokemon&ProductTypeName=Cards&page=1&setName=swsh08-fusion-strike'''
+    CASE = $'''SWSH09: Brilliant Stars'''
+        SET UserInput TO $'''https://www.tcgplayer.com/search/pokemon/product?view=grid&productLineName=pokemon&ProductTypeName=Cards&page=1&setName=swsh09-brilliant-stars-trainer-gallery|swsh09-brilliant-stars'''
+    CASE = $'''SWSH10: Astral Radiance'''
+        SET UserInput TO $'''https://www.tcgplayer.com/search/pokemon/product?view=grid&productLineName=pokemon&ProductTypeName=Cards&page=1&setName=swsh10-astral-radiance-trainer-gallery|swsh10-astral-radiance'''
+    CASE = $'''SWSH11: Lost Origin'''
+        SET UserInput TO $'''https://www.tcgplayer.com/search/pokemon/product?view=grid&productLineName=pokemon&ProductTypeName=Cards&page=1&setName=swsh11-lost-origin|swsh11-lost-origin-trainer-gallery'''
+    CASE = $'''SWSH12: Silver Tempest'''
+        SET UserInput TO $'''https://www.tcgplayer.com/search/pokemon/product?view=grid&productLineName=pokemon&ProductTypeName=Cards&page=1&setName=swsh12-silver-tempest|swsh12-silver-tempest-trainer-gallery'''
+    CASE = $'''Crown Zenith'''
+        SET UserInput TO $'''https://www.tcgplayer.com/search/pokemon/product?view=grid&productLineName=pokemon&setName=crown-zenith-galarian-gallery|crown-zenith&ProductTypeName=Cards&page=1'''
+    CASE = $'''SV01: Scarlet & Violet Base Set'''
+        SET UserInput TO $'''https://www.tcgplayer.com/search/pokemon/sv01-scarlet-and-violet-base-set?view=grid&productLineName=pokemon&ProductTypeName=Cards&page=1&setName=sv01-scarlet-and-violet-base-set'''
+    CASE = $'''SV02: Paldea Evolved'''
+        SET UserInput TO $'''https://www.tcgplayer.com/search/pokemon/sv02-paldea-evolved?view=grid&productLineName=pokemon&ProductTypeName=Cards&page=1&setName=sv02-paldea-evolved'''
+    CASE = $'''SV03: Obsidian Flames'''
+        SET UserInput TO $'''https://www.tcgplayer.com/search/pokemon/sv03-obsidian-flames?view=grid&productLineName=pokemon&ProductTypeName=Cards&page=1&setName=sv03-obsidian-flames'''
+    CASE = $'''SV04: Paradox Rift'''
+        SET UserInput TO $'''https://www.tcgplayer.com/search/pokemon/sv04-paradox-rift?view=grid&productLineName=pokemon&ProductTypeName=Cards&page=1&setName=sv04-paradox-rift'''
+    CASE = $'''SV: Scarlet & Violet 151'''
+        SET UserInput TO $'''https://www.tcgplayer.com/search/pokemon/sv-scarlet-and-violet-151?view=grid&productLineName=pokemon&ProductTypeName=Cards&page=1&setName=sv-scarlet-and-violet-151'''
+    CASE = $'''SV: Paldean Fates'''
+        SET UserInput TO $'''https://www.tcgplayer.com/search/pokemon/sv-paldean-fates?view=grid&productLineName=pokemon&ProductTypeName=Cards&page=1&setName=sv-paldean-fates'''
+END
 **REGION MAKE FILE
 DateTime.GetCurrentDateTime.Local DateTimeFormat: DateTime.DateTimeFormat.DateAndTime CurrentDateTime=> CurrentDateTime
 Text.ConvertDateTimeToText.FromCustomDateTime DateTime: CurrentDateTime CustomFormat: $'''yyyy-MM-dd-hh-mm-ss''' Result=> FormattedDateTime
-Text.SplitText.SplitWithDelimiter Text: UserInput CustomDelimiter: $'''(?:https:\\/\\/www\\.tcgplayer\\.com\\/search\\/)([^\\/?]+\\/[^\\/?]+)(?:\\?.*)?$''' IsRegEx: True Result=> TextList
+Text.SplitText.SplitWithDelimiter Text: UserInput CustomDelimiter: $'''setName=([^&]+)''' IsRegEx: True Result=> TextList
 SET Append_Filename TO TextList[1]
-Text.Replace Text: Append_Filename TextToFind: $'''/''' IsRegEx: False IgnoreCase: False ReplaceWith: $'''-''' ActivateEscapeSequences: False Result=> Append_Filename
+IF Contains(TextList[1], $'''|''', False) THEN
+    Text.Replace Text: TextList[1] TextToFind: $'''|''' IsRegEx: False IgnoreCase: False ReplaceWith: $'''-''' ActivateEscapeSequences: False Result=> Append_Filename
+ELSE IF Contains(TextList[1], $'''/''', False) THEN
+    Text.Replace Text: Append_Filename TextToFind: $'''/''' IsRegEx: False IgnoreCase: False ReplaceWith: $'''-''' ActivateEscapeSequences: False Result=> Append_Filename
+END
 # CREATE CSV
 @@copilotGeneratedAction: 'False'
 Scripting.RunPowershellScript.RunPowershellScript Script: $'''# Create a new folder named \"myFolder\" in the C:\\ directory
@@ -16,6 +80,7 @@ New-Item -ItemType File -Path \"C:\\TCGPlayer\\%FormattedDateTime%_%Append_Filen
 **REGION SETUP BROWSER
 # OPEN BROWSER
 WebAutomation.LaunchEdge.LaunchEdge Url: UserInput WindowState: WebAutomation.BrowserWindowState.Maximized ClearCache: False ClearCookies: False WaitForPageToLoadTimeout: 60 Timeout: 60 BrowserInstance=> Browser
+UIAutomation.ResizeWindow.ResizeByInstanceOrHandle WindowInstance: Browser Width: 1280 Height: 720
 # GET LAST PAGINATION
 WebAutomation.GetDetailsOfElement BrowserInstance: Browser Control: appmask['Web Page \'h ... rds&page=1\' 2']['Div \'12345...9\''] AttributeName: $'''Own Text''' AttributeValue=> PaginationValue
 Text.SplitText.Split Text: PaginationValue StandardDelimiter: Text.StandardDelimiter.Space DelimiterTimes: 1 Result=> PaginationValueTextList
