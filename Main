@@ -22,8 +22,7 @@ SWITCH SelectedItem
     CASE = $'''SWSH01: Sword & Shield Base Set'''
         SET UserInput TO $'''https://www.tcgplayer.com/search/pokemon/swsh01-sword-and-shield-base-set?view=grid&productLineName=pokemon&ProductTypeName=Cards&page=1&setName=swsh01-sword-and-shield-base-set'''
     CASE = $'''SWSH02: Rebel Clash'''
-        SET UserInput TO $'''https://www.tcgplayer.com/search/pokemon/swsh02-rebel-clash?view=grid&productLineName=pokemon&ProductTypeName=Cards&page=1&setName=swsh02-rebel-clash
-'''
+        SET UserInput TO $'''https://www.tcgplayer.com/search/pokemon/swsh02-rebel-clash?view=grid&productLineName=pokemon&ProductTypeName=Cards&page=1&setName=swsh02-rebel-clash'''
     CASE = $'''SWSH03: Darkness Ablaze'''
         SET UserInput TO $'''https://www.tcgplayer.com/search/pokemon/swsh03-darkness-ablaze?view=grid&productLineName=pokemon&ProductTypeName=Cards&page=1&setName=swsh03-darkness-ablaze'''
     CASE = $'''SWSH04: Vivid Voltage'''
@@ -65,10 +64,11 @@ Text.ConvertDateTimeToText.FromCustomDateTime DateTime: CurrentDateTime CustomFo
 Text.SplitText.SplitWithDelimiter Text: UserInput CustomDelimiter: $'''setName=([^&]+)''' IsRegEx: True Result=> TextList
 SET Append_Filename TO TextList[1]
 IF Contains(TextList[1], $'''|''', False) THEN
-    Text.Replace Text: TextList[1] TextToFind: $'''|''' IsRegEx: False IgnoreCase: False ReplaceWith: $'''-''' ActivateEscapeSequences: False Result=> Append_Filename
+    Text.Replace Text: Append_Filename TextToFind: $'''|''' IsRegEx: False IgnoreCase: False ReplaceWith: $'''-''' ActivateEscapeSequences: False Result=> Append_Filename
 ELSE IF Contains(TextList[1], $'''/''', False) THEN
     Text.Replace Text: Append_Filename TextToFind: $'''/''' IsRegEx: False IgnoreCase: False ReplaceWith: $'''-''' ActivateEscapeSequences: False Result=> Append_Filename
 END
+Text.Trim Text: Append_Filename TrimOption: Text.TrimOption.Both TrimmedText=> Append_Filename
 # CREATE CSV
 @@copilotGeneratedAction: 'False'
 Scripting.RunPowershellScript.RunPowershellScript Script: $'''# Create a new folder named \"myFolder\" in the C:\\ directory
