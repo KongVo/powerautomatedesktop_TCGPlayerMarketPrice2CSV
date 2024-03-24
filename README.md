@@ -10,7 +10,7 @@ This automation flow creates a CSV file with Pokemon market card prices from TCG
 
 ## Prerequisites
 
-- Power Automate Desktop installed (version 2.41.170.24032).
+- Power Automate Desktop installed (version 2.42.00237.24061).
 
 ## Usage
 
