@@ -18,7 +18,8 @@ SV03: Obsidian Flames
 SV04: Paradox Rift
 SV: Scarlet & Violet 151
 SV: Paldean Fates
-SV05: Temporal Forces''' IsTopMost: True AllowEmpty: False SelectedItem=> SelectedItem SelectedIndex=> SelectedIndex ButtonPressed=> ButtonPressed3
+SV05: Temporal Forces
+SV06: Twilight Masquerade''' IsTopMost: True AllowEmpty: False SelectedItem=> SelectedItem SelectedIndex=> SelectedIndex ButtonPressed=> ButtonPressed3
 SWITCH SelectedItem
     CASE = $'''SWSH01: Sword & Shield Base Set'''
         SET UserInput TO $'''https://www.tcgplayer.com/search/pokemon/swsh01-sword-and-shield-base-set?view=grid&productLineName=pokemon&ProductTypeName=Cards&page=1&setName=swsh01-sword-and-shield-base-set'''
@@ -60,6 +61,8 @@ SWITCH SelectedItem
         SET UserInput TO $'''https://www.tcgplayer.com/search/pokemon/sv-paldean-fates?view=grid&productLineName=pokemon&ProductTypeName=Cards&page=1&setName=sv-paldean-fates'''
     CASE = $'''SV05: Temporal Forces'''
         SET UserInput TO $'''https://www.tcgplayer.com/search/pokemon/sv05-temporal-forces?view=grid&productLineName=pokemon&ProductTypeName=Cards&page=1&setName=sv05-temporal-forces'''
+    CASE = $'''SV06: Twilight Masquerade'''
+        SET UserInput TO $'''https://www.tcgplayer.com/search/pokemon/sv06-twilight-masquerade?view=grid&productLineName=pokemon&ProductTypeName=Cards&page=1&setName=sv06-twilight-masquerade'''
 END
 IF ButtonPressed3 = $'''OK''' THEN
     **REGION MAKE FILE
