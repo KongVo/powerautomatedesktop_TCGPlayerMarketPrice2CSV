@@ -90,7 +90,7 @@ New-Item -ItemType File -Path \"C:\\TCGPlayer\\%FormattedDateTime%_%Append_Filen
     # GET LAST PAGINATION
     WebAutomation.GetDetailsOfElement BrowserInstance: Browser Control: appmask['Web Page \'h ... ea-evolved\'']['Div \'12345...12\''] AttributeName: $'''Own Text''' AttributeValue=> PaginationValue
     Text.SplitText.Split Text: PaginationValue StandardDelimiter: Text.StandardDelimiter.Space DelimiterTimes: 1 Result=> PaginationValueTextList
-    SET PaginationVar TO PaginationValueTextList[PaginationValueTextList.Count]
+    SET PaginationVar TO PaginationValueTextList[PaginationValueTextList.Count - 1]
     Text.ToNumber Text: PaginationVar Number=> PaginationNumber
     **ENDREGION
     **REGION EXTRACT DATA
