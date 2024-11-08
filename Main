@@ -19,7 +19,9 @@ SV: Scarlet & Violet 151
 SV: Paldean Fates
 SV05: Temporal Forces
 SV06: Twilight Masquerade
-SV: Shrouded Fable''' IsTopMost: True AllowEmpty: False SelectedItem=> SelectedItem SelectedIndex=> SelectedIndex ButtonPressed=> ButtonPressed3
+SV: Shrouded Fable
+SV07: Stellar Crown
+SV08: Surging Sparks''' IsTopMost: True AllowEmpty: False SelectedItem=> SelectedItem SelectedIndex=> SelectedIndex ButtonPressed=> ButtonPressed3
 SWITCH SelectedItem
     CASE = $'''SWSH01: Sword & Shield Base Set'''
         SET UserInput TO $'''https://www.tcgplayer.com/search/pokemon/swsh01-sword-and-shield-base-set?view=grid&productLineName=pokemon&ProductTypeName=Cards&page=1&setName=swsh01-sword-and-shield-base-set'''
@@ -67,6 +69,8 @@ SWITCH SelectedItem
         SET UserInput TO $'''https://www.tcgplayer.com/search/pokemon/sv-shrouded-fable?view=grid&productLineName=pokemon&ProductTypeName=Cards&page=1&setName=sv-shrouded-fable'''
     CASE = $'''SV07: Stellar Crown'''
         SET UserInput TO $'''https://www.tcgplayer.com/search/pokemon/sv07-stellar-crown?view=grid&productLineName=pokemon&ProductTypeName=Cards&page=1&setName=sv07-stellar-crown'''
+    CASE = $'''SV08: Surging Sparks'''
+        SET UserInput TO $'''https://www.tcgplayer.com/search/pokemon/sv08-surging-sparks?view=grid&productLineName=pokemon&ProductTypeName=Cards&page=1&setName=sv08-surging-sparks'''
 END
 IF ButtonPressed3 = $'''OK''' THEN
     **REGION MAKE FILE
